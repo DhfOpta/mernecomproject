@@ -1,0 +1,12 @@
+.txt{
+    font-size: 1.6rem;
+}
+.txt div .form-control::placeholder{
+    font-size: 1.6rem;
+}
+.txt div input{
+    font-size: 1.6rem;
+}
+.txt .btn-primary{
+font-size: 1.6rem;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

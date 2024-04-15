@@ -1,0 +1,40 @@
+.Contnr{display: flex;flex-direction: column;justify-content: center;align-items: center;
+}
+.Contnr .prdctDtl{display: flex;flex-direction: column
+    ;justify-content: center;align-items: flex-start;margin: 1.5rem 2rem
+    ;padding: 0 7rem;width: 50%;gap: 1.2rem;
+}
+.Contnr .imgCnt img{border: .1rem solid;
+    border-radius: 2rem;
+}
+.Contnr .CartBtn{
+
+}
+.Contnr .CartQuntCont{
+    display: flex;flex-direction: column;position: relative;
+}
+.Contnr .cardQuntBtn{
+    display: flex;flex-direction: row;visibility: visible;position: absolute;bottom: 0;right: 0;
+}
+.Contnr .hide{
+    visibility: hidden;
+}
+.Contnr .show{
+    visibility: visible; 
+}
+/* .Contnr button{
+    
+} */
+@media screen and (max-width:768px) {
+    .Contnr{display: flex;flex-direction: column;justify-content: center;align-items: center;
+    }
+    .Contnr .prdctDtl{display: flex;flex-direction: column
+        ;justify-content: center;align-items: flex-start;margin: 1.5rem 2rem
+        ;padding: 0 3rem;width: 100%;gap: .5rem;
+    }
+    .Contnr .imgCnt img{
+        border: .1rem solid grey;
+        border-radius: 2rem;
+        width: 100%;
+    }
+}

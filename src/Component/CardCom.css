@@ -1,0 +1,97 @@
+.cardCont{
+    display: flex;flex-direction: column;
+    width: 25%;height: 35vh;
+}
+.carPRC{
+    display: flex;flex-direction: row;gap: 1rem;align-items: center;justify-content: space-between;
+}
+.carPRC div{
+    display: flex;flex-direction: column;
+}
+.immggg{
+    object-fit: fill;
+}
+.cardCont .CartQuntCont{
+    display: flex;flex-direction: column;position: relative;
+}
+.cardCont .cardQuntBtn{
+    display: flex;flex-direction: row;visibility: visible;position: absolute;bottom: 0;right: 0;
+}
+.cardCont .hide{
+    visibility: hidden;
+}
+.cardCont .show{
+    visibility: visible; 
+}
+
+
+/* .cardCont .CartBtn:hover::before .cardCont .cardQuntBtn {position: absolute;content: '';top: 0%;right: 0%;
+    background-color: black;visibility: visible;
+} */
+/* .cardCont .CartQuntCont{
+    display: flex;flex-direction: column;background-color: black;position: relative;
+}
+.cardCont .CartBtn{
+    background-color:green;
+}
+.cardCont .CartBtn:hover .cardCont>.CartQuntCont{
+    background-color:rgb(163, 24, 24);
+}
+.cardCont .cardQuntBtn{
+    display: flex;flex-direction: row;align-items: center;gap: .4rem;position: absolute;bottom: 0%;right: 0%;visibility: visible;
+} */
+
+@media screen and (min-width:1024px)  {
+    .cardCont{
+        display: flex;flex-direction: column;
+        width: 25%;height: 40vh;
+    }
+    .carPRC{
+        display: flex;flex-direction: row;gap: 1rem;align-items: center;justify-content: space-between;
+    }
+    .carPRC div{
+        display: flex;flex-direction: column;
+    }
+    .immggg{
+        object-fit: fill;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .cardCont{
+        display: flex;flex-direction: column;
+        width: 35%;height: 30vh;min-width: 35%;
+    }
+    .carPRC{
+        display: flex;flex-direction: row;gap: 1rem;align-items: center;justify-content: space-between;
+    }
+    .carPRC div{
+        display: flex;flex-direction: column;
+    }
+    .immggg{
+        object-fit: fill;
+    }
+}
+@media screen and (max-width:767px) {
+    .cardCont{
+        display: flex;flex-direction: column;
+        width: 75%;
+        height: 45vh;
+        flex-wrap: wrap;
+        
+        min-width: 75%;
+        max-height: 47vh;
+     } 
+    /* .cardCont{
+        display: flex;flex-direction: column;flex-wrap: wrap;
+        width: 75%;height: 46vh;min-width: 35%;
+    } */
+    .carPRC{
+        display: flex;flex-direction: row;gap: 1rem;align-items: center;justify-content: space-between;
+    }
+    .carPRC div{
+        display: flex;flex-direction: column;
+    }
+    .immggg{
+        object-fit: fill;
+    }
+}

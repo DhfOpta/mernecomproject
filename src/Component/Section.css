@@ -1,0 +1,200 @@
+.productContn {
+    display: flex;
+    flex-direction: row;
+    gap: 1.6rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.heroSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2.5rem 2rem;
+}
+
+.heroSection .hrerCard {
+    width: '100%';
+    height: '50vh';
+    border-radius: '1rem'
+}
+
+
+/* .sapbA {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: end;
+    padding: 2rem 1rem 0 1rem;
+
+}
+
+.sapbA p {
+    cursor: pointer;
+} */
+
+.heroCarovsul {
+    width: 100%;
+    overflow: hidden;
+}
+
+.heroCarosulINsde {
+    border: .1rem solid yellow;
+    width: 100%;
+    height: 70vh;
+    margin-left: 200px;
+}
+
+.heroCarosulINsder {
+    width: 100%;
+    display: flex;
+    height: 70vh;
+}
+
+.carosulCont {
+    border: .1rem solid rgb(158, 65, 65);
+    height: 40vh;
+    display: flex;
+    overflow: hidden
+}
+
+.carosul {
+    border: .1rem solid yellow;
+    width: 100%
+}
+
+.carosul .cardCArosl {
+    background-color: aqua;
+}
+
+.imgg {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    padding-left: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    border: 1rem solid yellow;
+}
+
+.sectnName {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: .9rem 6rem;
+}
+
+.sectnName p {
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    
+}
+
+@media screen and (max-width:768px) {
+    .productContn {
+        display: flex;
+        flex-direction: row;
+        gap: 1.6rem;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center
+    }
+
+    .heroSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 2.5rem 2rem;
+    }
+
+    /* .sapbA {
+        font-size: 1.5rem;
+        font-weight: 700;
+        display: flex;
+        justify-content: end;
+        padding: 2rem 1rem 0 1rem;
+
+    }
+
+    .sapbA p {
+        cursor: pointer;
+    } */
+
+    .heroSection .hrerCard {
+        width: '100%';
+        height: '50vh';
+        border-radius: '1rem'
+    }
+
+
+
+
+    .heroCarovsul {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .heroCarosulINsde {
+        border: .1rem solid yellow;
+        width: 100%;
+        height: 70vh;
+        margin-left: 200px;
+    }
+
+    .heroCarosulINsder {
+        width: 100%;
+        display: flex;
+        height: 70vh;
+    }
+
+    .carosulCont {
+        border: .1rem solid rgb(158, 65, 65);
+        height: 40vh;
+        display: flex;
+        overflow: hidden
+    }
+
+    .carosul {
+        border: .1rem solid yellow;
+        width: 100%
+    }
+
+    .carosul .cardCArosl {
+        background-color: aqua;
+    }
+
+    .imgg {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        padding-left: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cards {
+        border: 1rem solid yellow;
+    }
+
+    .sectnName {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: .9rem 6rem;
+    }
+
+    .sectnName p {
+        font-size: 1.6rem;
+        cursor: pointer;
+    }
+
+
+}

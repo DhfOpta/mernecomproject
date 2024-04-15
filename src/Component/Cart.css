@@ -1,0 +1,36 @@
+.cartBox .pq{
+    display: flex;flex-direction: column;align-items: flex-start;
+}
+.cartBox {
+    width: 100%;
+    text-wrap: wrap;justify-content: flex-end;position: relative;
+}
+.cartBox .delteBtn button{
+    padding: .5rem 2rem;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-transform: capitalize;font-weight: 600;border: .1rem solid skyblue;background-color: transparent;border-radius: .5rem;color: rgb(253, 5, 5);
+}
+.delteBtn button:hover{
+    color: white;;background-color: skyblue;transition: all .5s ease;
+}
+.cartBox .delteBtn{
+    position: absolute;display: none;padding: 1rem 2rem;top:0;right: 0;z-index: 99;
+}
+.cartBox:hover .delteBtn {
+    display: block;transition: all .5s ease;
+}
+.cartBox:hover{
+    background-color: rgba(8, 8, 8, 0.095);transition: all .3s ease;
+}
+.cartBox:hover .imggggg::after{position: absolute;
+    content: ' ';top: 0%;left: 0%;right: 0%;left: 0%;height: fit-content;width: fit-content;
+    background-color: rgba(8, 8, 8, 0.095); ;
+}
+@media screen and (max-width:768px) {
+    .cartBox{
+        width: 100%;
+        text-wrap: wrap;
+    } 
+    .cartBox .pq{
+        display: flex;flex-direction: column;gap: 0rem;text-wrap: balance;text-align: justify;padding: 0 1.5rem ;width: 100%;
+        /* border: .1rem solid black; */
+    }
+}

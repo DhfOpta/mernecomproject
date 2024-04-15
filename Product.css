@@ -1,0 +1,9 @@
+.ProductFirstCont{
+    display: flex;flex-direction: row;gap: 1rem;flex-wrap: wrap;
+}
+.ProductFirstCont button{
+    cursor: pointer;
+}
+.productContnr{
+    display: flex;flex-direction: row;justify-content: center;align-items: center;gap: 2rem;margin-top: 6rem;flex-wrap: wrap;
+}

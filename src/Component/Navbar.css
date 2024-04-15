@@ -1,0 +1,19 @@
+header{display: flex;justify-content: space-between;font-size: 1.7rem;padding: .5rem 1.5rem;}
+header nav ul{
+display: flex;list-style: none;gap: 1.2rem;flex-direction: row;
+}
+header nav ul li .navLnk{
+    cursor: pointer;text-decoration: none;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar{
+    position: sticky;top: 0;z-index: 999;padding: 1rem 0;
+}
+.navbar .ulCalss{
+   gap: 2rem;margin-left: 1rem;
+}
+.navbar .ulCalss li .navLnk{
+text-decoration: none;color: black;font-weight: 600;font-size: 1.4rem;
+}
+.navbar .ulCalss li  .active{
+    text-decoration: underline;color: black;
+    }
