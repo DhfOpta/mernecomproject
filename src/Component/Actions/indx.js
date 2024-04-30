@@ -40,7 +40,13 @@ export const addCart=(data)=>{
         payload:data
     }
 }
-
+export const buy=(data)=>{
+    console.log(data);
+    return{
+        type:"SET_TO_BUY",
+        payload:data
+    }
+}
 // export const dynamicDataGet=(gtData)=>{
 //     console.log(gtData);
 //     return{

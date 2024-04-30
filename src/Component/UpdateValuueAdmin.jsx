@@ -167,22 +167,22 @@ export const UpdateValuueAdmin = () => {
                             <th scope="row" >{indx + 1}</th>
                             
                             {(hidee && cvl._id == updateData._id )?
-                             <td style={{width:'20.5%'}}><input key={cvl._id} type='text' style={{ width: '100%', padding: '.5rem 1.5rem' }} onChange={gtUpdateValue} value={updateData.title} name='title' placeholder='Enter Product Title' /></td>
+                             <td style={{width:'20.5%'}}><input key={cvl._id} type='text' style={{ width: '100%', padding: '.5rem 1.5rem' ,border:'.1rem solid black'}} onChange={gtUpdateValue} value={updateData.title} name='title' placeholder='Enter Product Title' /></td>
                              :   
                              <td style={{width:'20.5%'}}>{cvl.title}</td>
                              }
                              {(hidee && cvl._id == updateData._id )?
-                             <td style={{width:'20.5%'}}>  <input key={cvl._id} type='number' style={{ width: '100%', padding: '.5rem 1.5rem' }} onChange={gtUpdateValue} value={updateData.stock} name='stock' placeholder='Enter Product Stock' /></td>
+                             <td style={{width:'20.5%'}}>  <input key={cvl._id} type='number' style={{ width: '100%', padding: '.5rem 1.5rem' ,border:'.1rem solid black'}} onChange={gtUpdateValue} value={updateData.stock} name='stock' placeholder='Enter Product Stock' /></td>
                              :   
                              <td style={{width:'20.5%'}}>{cvl.stock}</td>
                              }
                              {(hidee && cvl._id == updateData._id )?
-                             <td style={{width:'20.5%'}}><input key={cvl._id} type='number' style={{ width: '100%', padding: '.5rem 1.5rem' }} onChange={gtUpdateValue} value={updateData.price} name='price' placeholder='Enter Product Price' /></td>
+                             <td style={{width:'20.5%'}}><input key={cvl._id} type='number' style={{ width: '100%', padding: '.5rem 1.5rem',border:'.1rem solid black' }} onChange={gtUpdateValue} value={updateData.price} name='price' placeholder='Enter Product Price' /></td>
                              :   
                              <td style={{width:'20.5%'}}>{cvl.price * 72}</td>
                              }
                              {(hidee && cvl._id == updateData._id )?
-                             <td style={{width:'20.5%'}}> <input key={cvl._id} type='number' style={{ width: '100%', padding: '.5rem 1.5rem' }} onChange={gtUpdateValue} value={updateData.rating} name='rating' placeholder='Enter Product rating' /></td>
+                             <td style={{width:'20.5%'}}> <input key={cvl._id} type='number' style={{ width: '100%', padding: '.5rem 1.5rem',border:'.1rem solid black' }} onChange={gtUpdateValue} value={updateData.rating} name='rating' placeholder='Enter Product rating' /></td>
                              :   
                              <td style={{width:'20.5%'}}>{cvl.rating}</td>
                              }

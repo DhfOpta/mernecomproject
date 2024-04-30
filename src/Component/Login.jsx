@@ -100,7 +100,7 @@ const Login = () => {
                     <button type="submit" className="btn btn-primary" onClick={postData}>Log In</button>
                 </form>
             </div>
-            Dhfopta@1
+            {/* Dhfopta@1 */}
         </>)
 }
 

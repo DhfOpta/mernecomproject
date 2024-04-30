@@ -144,7 +144,7 @@ const Seconsection = ({ data }) => {
                                                 </div>
 
                                             </div>
-                                            <Button variant="outlined" onClick={()=>addCart(cvl._id,cvl.img,cvl.price,cvl.description,cvl.brand,cvl.title,cvl.category,count)}>Cart</Button>
+                                            {/* <Button variant="outlined" onClick={()=>addCart(cvl._id,cvl.img,cvl.price,cvl.description,cvl.brand,cvl.title,cvl.category,count)}>Cart</Button> */}
                                         </CardActions>
                                     </Card>
 

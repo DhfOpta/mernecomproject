@@ -118,7 +118,7 @@ const [btn,setBtn]=useState('All')
 
         <Button variant="outlined" onClick={gtBtnTxt} >Search</Button>
       </div>
-      <div className='productContnr'>
+      <div className='productContnr' >
         {
           emporryNote? <><div style={{ display: 'grid', placeItems: "center", height: '80vh' }}> <h2>No Data</h2></div></>:
           <>

@@ -23,6 +23,9 @@
 .cardCont .show{
     visibility: visible; 
 }
+.carPRC .CardBtn{
+    display: flex;gap: .5rem;
+}
 
 
 /* .cardCont .CartBtn:hover::before .cardCont .cardQuntBtn {position: absolute;content: '';top: 0%;right: 0%;

@@ -5,7 +5,10 @@ const initalVal = {
     DisplayProductData: [],
     btnValue: "All",
     CartQunt:0,
-    authValidToken:''
+    authValidToken:'',
+    buyDetal:{
+        
+    }
 }
 
 export const taskReducer = (state = initalVal, action) => {
@@ -61,6 +64,13 @@ export const taskReducer = (state = initalVal, action) => {
                     CartQunt:action.payload
                 }
 
+                
+
+case 'SET_TO_BUY':
+    console.log(action.payload,'dataBuyUserdataBuyUserdataBuyUser');
+    return{
+        buyDetal:action.payload
+    }
         default:
             return state
     }

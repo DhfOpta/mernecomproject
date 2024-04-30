@@ -13,10 +13,10 @@ export const AdminNavNAnvb = () => {
          <Button variant="outlined"  value='smartphones' >Update Product</Button>
 
          </NavLink>
-         <NavLink to='/admin_Auth/CahtRply'>
+         {/* <NavLink to='/admin_Auth/CahtRply'>
          <Button variant="outlined"  value='smartphones' >Caht Rply</Button>
 
-         </NavLink>
+         </NavLink> */}
       </div>
   </>
 }

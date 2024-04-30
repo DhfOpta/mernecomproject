@@ -26,6 +26,7 @@ import { UpdateValuueAdmin } from './Component/UpdateValuueAdmin.jsx'
 import { NotFound } from './Component/NotFound.jsx'
 import {Chat} from './Component/Chat.jsx'
 import CahtRply from './Component/CahtRply.jsx'
+import { Buy } from './Component/Buy.jsx'
 function App() {
   const { datauser, isLogin, admin } = useCustmHook()
   // const nvgt=useNavigate()  const { isLogin, length } = useCustmHook()
@@ -48,7 +49,7 @@ function App() {
       {admin && isLogin ? <>     <AuthNavBar /> <AdminNavNAnvb/>
       </> : <>      <Navbar />
 
-      <Chat/>
+      {/* <Chat/> */}
       </>}
 
 
@@ -67,7 +68,7 @@ function App() {
           <Route path='Contact' element={<Contct />} />
           <Route path='/home/SingleProdctData/:id' element={<SingleProdctData />} />
           <Route path='/home/Cart' element={<Cart />} />
-
+          <Route path='/home/Buy' element={<Buy />} />
           <Route path='/home/logout' element={<Logout />} />
         </Route>
         <Route path='/admin_Auth' element={<Protect_Rour />}>
@@ -77,7 +78,7 @@ function App() {
           
           <Route path='/admin_Auth/Upadte' element={<UpdateValuueAdmin />} />
 
-          <Route path='/admin_Auth/CahtRply' element={<CahtRply />}/>
+          {/* <Route path='/admin_Auth/CahtRply' element={<CahtRply />}/> */}
             
           
           <Route path='/admin_Auth/logout' element={<Logout />}></Route>

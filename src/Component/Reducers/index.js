@@ -1,5 +1,6 @@
 const initialValue = {
-    textField: []
+    textField: [],
+    buyDetal:{}
 }
 export const reducer = (state = initialValue, action) => {
     switch (action.type) {
@@ -10,8 +11,6 @@ export const reducer = (state = initialValue, action) => {
                 textField:[...state.textField,action.payload]
             }
 
-
-
-        default: return state;
+        default: return {state,buyDetal:action.payload};
     }
 }

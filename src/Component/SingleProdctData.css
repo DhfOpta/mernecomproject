@@ -4,6 +4,8 @@
     ;justify-content: center;align-items: flex-start;margin: 1.5rem 2rem
     ;padding: 0 7rem;width: 50%;gap: 1.2rem;
 }
+.Contnr .prdctDtl h3{display: flex;flex-direction: row;
+    gap: 1rem;}
 .Contnr .imgCnt img{border: .1rem solid;
     border-radius: 2rem;
 }
@@ -14,7 +16,7 @@
     display: flex;flex-direction: column;position: relative;
 }
 .Contnr .cardQuntBtn{
-    display: flex;flex-direction: row;visibility: visible;position: absolute;bottom: 0;right: 0;
+    display: flex;flex-direction: row;visibility: visible;position: absolute;top: 0;right: -3.9rem;
 }
 .Contnr .hide{
     visibility: hidden;

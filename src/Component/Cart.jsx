@@ -13,11 +13,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { addCart } from '../Component/Actions/indx';
+import { addCart, buy } from '../Component/Actions/indx';
 import MediaControlCard from './MediaControlCard';
 import { useCustmHook } from '../Contxt/contxt';
 import { Button } from '@mui/material';
 import LinearIndeterminate from './Spinner';
+import { useNavigate } from 'react-router-dom';
 let API = `http://localhost:5000/Cartgt/`
 const Cart = () => {
   const [data, setData] = useState([])
@@ -25,11 +26,15 @@ const Cart = () => {
   console.log(count);
   const dataRedux = useSelector((state) => state.taskReducer)
   console.log(dataRedux);
-  const { datauser, gtCartLngth, cartClickd } = useCustmHook()
+  // const dispatch=useDispatch()
+  const { datauser, gtCartLngth, cartClickd, dataUserBuy } = useCustmHook()
   console.log(datauser);
   const [click, setClick] = useState(false)
   const dispatch = useDispatch()
   const [loding, setLoding] = useState(false)
+  const nvgt = useNavigate()
+// const [buyDetal,setBuydetl]=useState()
+
 
   const incrMntCount = async (prodct_idQ, dataQ, dataP) => {
     // setCount(count+1)
@@ -150,6 +155,51 @@ const Cart = () => {
 
     // setData(CartDatagt.data.msg)
   }
+
+
+
+  const postBuyData = async (_id, img, price, description, brand, title, countt) => {
+    const dataBuyUser = {
+      UserId: datauser._id,
+      UserName: datauser.name,
+      date: new Date(),
+      prodct_id: _id,
+      // img: img,
+      Pprice: price,
+      // description: description,
+      // brand: brand,
+      Ptitle: title,
+      // Prating:rating,
+      // category: category,
+      Pquntt: countt,
+      // UserAddress: "a"
+
+    }
+    dispatch(buy(dataBuyUser))
+    dataUserBuy(dataBuyUser)
+
+    // dataUserBuy(dataBuyUser)
+    nvgt('/home/Buy')
+    // try {
+    //   const dataPost=await axios.post('http://localhost:5000/BuyData',dataBuyUser
+    // , {
+    //   headers: {
+    //     'Content-Type': "application/json"
+    //   }
+    // }
+    // )
+    // console.log(dataPost,'dadataPost');
+
+
+    // } catch (error) {
+    //   console.log(error);
+    // }
+  }
+
+
+
+
+
   // gtCartLngth(data.length)
   useEffect(() => {
     // ftchCartdata(API)
@@ -192,7 +242,14 @@ const Cart = () => {
                     <IconButton aria-label="next">Price:{data.price}
                     </IconButton>
                   </div>
+                  <div>
+                    <Button variant="outlined" onClick={() => {
+                      postBuyData(data._id, data.img, data.price, data.description, data.brand, data.title,
+                        data.Qunt)
+                    }}>Buy</Button>
 
+                    {/* <Buy   /> */}
+                  </div>
                 </Box>
 
 

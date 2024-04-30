@@ -13,11 +13,12 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useCustmHook } from '../Contxt/contxt';
 import { ToastContainer, toast } from 'react-toastify';
+import { Buy } from './Buy';
 export const CardCom = ({ data }) => {
   const [mouse, setMouse] = useState(false)
   let [quntt, setqunt] = useState(0);
   // let [qunttUpDate, setquntUpDate] = useState(quntt)
-  const { datauser, cartClickd } = useCustmHook()
+  const { datauser, cartClickd,dataUserBuy } = useCustmHook()
   // const [count, setCount] = useState(1)
   // const setData = useSelector((state) => state.taskReducer)
   // console.log(count);
@@ -25,7 +26,7 @@ export const CardCom = ({ data }) => {
   // const dispatch = useDispatch()
   // let [countt, setCountt] = useState(0)
 
-
+  console.log(datauser);
 
 
   //Update Data
@@ -157,8 +158,37 @@ export const CardCom = ({ data }) => {
     console.log('mouseOUT');
 
   }
+
+  const postBuyData=async(_id, img, price, description, brand, title, category, countt,rating)=>{
+console.log(_id, img, price, description, brand, title, category, countt,'detaldetal');
+console.log(datauser);
+
+const dataBuyUser = {
+  UserId: datauser._id,
+  UserName:datauser.name,
+  date:new Date(),
+  prodct_id: _id,
+  // img: img,
+  Pprice: (price * 72)*quntt,
+  // description: description,
+  // brand: brand,
+  Ptitle: title,
+  Prating:rating,
+  // category: category,
+  Pquntt: quntt,
+  UserAddress:"a"
+
+}
+
+  }
+  const stockOut=(stock)=>{
+    setqunt(0)
+    toast.warn('Product stock is'+stock)
+    
+
+  }
   return <>
-    {/* <ToastContainer /> */}
+    <ToastContainer />
 
     <Card className='cardCont' >
       <CardActionArea>
@@ -193,26 +223,36 @@ export const CardCom = ({ data }) => {
           </div>
 
         </div>
-        <div className='CartQuntCont' onClick={mousEnter} onMouseLeave={mousOut}>
-          <div className={mouse ? 'cardQuntBtn show' : 'cardQuntBtn hide'}>
+        <div className='CardBtn'>
+          <div className='CartQuntCont' onClick={mousEnter} onMouseLeave={mousOut}>
+            <div className={mouse ? 'cardQuntBtn show' : 'cardQuntBtn hide'}>
 
-            <Button variant="outlined" onClick={() => { 
-              // {quntt>0?}
-              // addCart(data._id, data.img, data.price, data.description, data.brand, data.title, data.category, quntt - 1);
-              decrMntCount(data._id, quntt, data.price),
-              
-               deCrmntQunt(); }}>-</Button>
-            {quntt > data.stock ? alert('Product is not more than') : quntt}
-            <Button variant="outlined" onClick={() => { inCrmntQunt(); addCart(data._id, data.img, data.price, data.description, data.brand, data.title, data.category, quntt); }}  >+</Button>
+              <Button variant="outlined" onClick={() => {
+                // {quntt>0?}
+                // addCart(data._id, data.img, data.price, data.description, data.brand, data.title, data.category, quntt - 1);
+                decrMntCount(data._id, quntt, data.price),
+
+                  deCrmntQunt();
+              }}>-</Button>
+              {quntt > data.stock ? stockOut(data.stock) : quntt}
+              <Button variant="outlined" onClick={() => { inCrmntQunt(); addCart(data._id, data.img, data.price, data.description, data.brand, data.title, data.category, quntt); }}  >+</Button>
+
+
+            </div>
+
+            <div className={mouse ? 'CartBtn hide' : 'CartBtn show'} >
+              <Button variant="outlined"  >Cart</Button>
+            </div>
 
 
           </div>
+          <div>
+          {/* <Button variant="outlined"  onClick={()=>{postBuyData(data._id, data.img, data.price, data.description, data.brand, data.title, data.category, quntt,data.rating)}}>Buy</Button> */}
 
-          <div className={mouse ? 'CartBtn hide' : 'CartBtn show'} >
-            <Button variant="outlined"  >Cart</Button>
+            {/* <Buy   /> */}
           </div>
-
         </div>
+
       </CardActions>
     </Card>
   </>;
